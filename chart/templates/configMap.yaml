@@ -1,0 +1,28 @@
+# TODO:
+# Add syslog relay config to: /etc/rsyslog.d/00-promtail-relay.conf
+#
+# # Accept UDP senders
+# module(load="imudp")
+# input(type="imudp" port="514" ruleset="remote")
+
+# # Accept TCP senders
+# module(load="imtcp")
+# input(type="imtcp" port="514" ruleset="remote")
+
+# # Forward everything to Promtail
+# ruleset(name="remote"){
+#   action(
+#     type="omfwd"
+#     Target="promtail.foo.com"
+#     Port="1514"
+#     Protocol="tcp"
+#     Template="RSYSLOG_SyslogProtocol23Format"
+#     TCP_Framing="octet-counted"
+
+#     # Reliability queue
+#     queue.type="LinkedList"
+#     queue.size="100000"
+#     queue.saveonshutdown="on"
+#     action.resumeRetryCount="-1"
+#   )
+# }
