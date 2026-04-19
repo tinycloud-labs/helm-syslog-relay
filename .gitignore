@@ -1,0 +1,6 @@
+.vscode/
+**/.DS_Store
+charts/**/Chart.lock
+charts/**/charts/
+.DS_Store
+test*

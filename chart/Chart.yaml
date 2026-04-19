@@ -1,0 +1,14 @@
+apiVersion: v2
+name: syslogrelay
+description: A Helm chart for rsyslog to ingests UDP/TCP syslog and forwards to a TCP endpoint
+
+maintainers:
+  - name: TinyCloud Labs
+    url: https://github.com/tinycloud-labs
+
+type: application
+
+version: 0.0.1
+
+# TODO: match rsyslog container tag/release version
+appVersion: "1.16.0"
